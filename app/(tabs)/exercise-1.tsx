@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
+import { View, Text, Button, StyleSheet, TouchableOpacity } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 
 const WeatherApp = () => {
@@ -29,9 +29,7 @@ const WeatherApp = () => {
 
             <Text style={styles.title}>Weather App</Text>
 
-            <Button title='Toggle to Fahrenheit' onPress={toggleUnit} />
-
-            <View>
+            <View style={styles.locationCard}>
 
                 <Picker
                     selectedValue={selectedCity}
@@ -43,7 +41,7 @@ const WeatherApp = () => {
                     ))}
                 </Picker>
 
-                <Text style={{ marginTop: 10 }}>Selected: {selectedCity}</Text>
+                <Text style={styles.selected}>Selected: {selectedCity}</Text>
 
             </View>
 
@@ -56,8 +54,12 @@ const WeatherApp = () => {
                     </Text>
                 </View>
             ) : (
-                <Text style={styles.loading}>No weather data available</Text>
+                <Text>No weather data available</Text>
             )}
+
+            <TouchableOpacity style={styles.button} onPress={toggleUnit}>
+                <Text style={styles.buttonText}>Toggle Unit of Measurement</Text>
+            </TouchableOpacity>
 
         </View>
     );
@@ -71,9 +73,61 @@ const styles = StyleSheet.create({
         backgroundColor: '#f0f0f0',
     },
     title: {
-        fontSize: 20,
+        fontSize: 40,
+        fontWeight: 'bold',
         color: 'black',
+        bottom: 60,
     },
+    locationCard: {
+        backgroundColor: 'white',
+        borderRadius: 16,
+        borderColor: 'black',
+        borderWidth: 2,
+        padding: 8,
+        width: 300,
+        marginBottom: 20,
+    },
+    selected: {
+        marginTop: 10,
+        textAlign: 'center',
+        fontSize: 18
+    },
+    weatherCard: {
+        backgroundColor: '#63e2ff',
+        borderRadius: 16,
+        borderColor: 'black',
+        borderWidth: 2,
+        padding: 8,
+        width: 300,
+        marginBottom: 10
+    },
+    city: {
+        fontSize: 32,
+        textAlign: 'center',
+    },
+    condition: {
+        fontSize: 24,
+        textAlign: 'center',
+    },
+    temperature: {
+        fontSize: 46,
+        fontWeight: 'bold',
+        textAlign: 'center',
+        marginTop: 14,
+    },
+    button: {
+        backgroundColor: 'white',
+        padding: 6,
+        borderRadius: 100,
+        borderColor: 'black',
+        borderWidth: 2,
+        width: 300,
+    },
+    buttonText: {
+        color: 'blue',
+        fontSize: 18,
+        textAlign: 'center'
+    }
 });
 
 export default WeatherApp;
