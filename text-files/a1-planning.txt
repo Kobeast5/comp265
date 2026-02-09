@@ -1,0 +1,21 @@
+App Idea
+
+    - The app will be a platform meant for posting visual artwork.
+    - Key features include:
+        - Uploading image based content
+        - Interacting with other users and their content
+        - Having a feed of posts catered to the user's interests
+        - Searching for specific content
+
+    - For the purpose of this assignment, the app will be for iOS only.
+
+
+How will the user interact with your app?
+
+    - Users can click on posts, which appear as preview images, to view them fully.
+    - Once in this view, users can like, save, comment on the post, and follow the artist.
+
+
+Sketch or wireframe your design.
+
+C:\..\media\assignment-1-wireframe
