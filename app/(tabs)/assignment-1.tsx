@@ -1,51 +1,62 @@
 import React from 'react';
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { Image, ScrollView, StatusBar, StyleSheet, Text, View } from 'react-native';
 
 const ArtworkApp = () => {
     return (
 
-        <View style={styles.container}>
+        <View style={styles.screen}>
 
+            <StatusBar barStyle="light-content" />
             <View style={styles.topbar}></View>
 
-            <View style={styles.postInfo}>
+            <ScrollView contentContainerStyle={styles.container}>
 
-                <Image source={require('../../media/example-profile-picture.jpeg')} style={styles.profilePicture} />
+                <View style={styles.postInfo}>
 
-                <View style={styles.usernameAndTitle}>
+                    <Image source={require('../../media/example-profile-picture.jpeg')} style={styles.profilePicture} />
 
-                    <Text style={styles.title}>My Artwork</Text>
+                    <View style={styles.usernameAndTitle}>
 
-                    <Text style={styles.username}>Kobeast</Text>
+                        <Text style={styles.title}>Seele</Text>
+                        <Text style={styles.username}>By: Amaki</Text>
+
+                    </View>
 
                 </View>
 
-            </View>
+                <Image source={require('../../media/seele.jpeg')} style={styles.postImage} />
+
+            </ScrollView>
 
         </View>
-
     )
 };
 
 const styles = StyleSheet.create({
-    container: {
+    screen: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
         backgroundColor: '#f0f0f0',
+    },
+
+    container: {
+        paddingTop: 66,
     },
 
     topbar: {
         position: 'absolute',
         top: 0,
+        left: 0,
+        right: 0,
         backgroundColor: '#73A3D3',
-        width: 400,
         height: 50,
+        zIndex: 1000,
     },
 
     postInfo: {
         flexDirection: 'row',
         alignItems: 'center',
+        paddingLeft: 16,
+        paddingBottom: 16,
     },
 
     profilePicture: {
@@ -66,6 +77,11 @@ const styles = StyleSheet.create({
     username: {
         fontSize: 21,
         fontWeight: 600,
+    },
+
+    postImage: {
+        width: '100%',
+        height: 640,
     },
 })
 
