@@ -1,5 +1,7 @@
+import Ionicons from '@expo/vector-icons/Ionicons';
 import React from 'react';
-import { Image, ScrollView, StatusBar, StyleSheet, Text, View } from 'react-native';
+import { Button, Image, Pressable, ScrollView, StatusBar, StyleSheet, Text, View } from 'react-native';
+
 
 const ArtworkApp = () => {
     return (
@@ -25,6 +27,32 @@ const ArtworkApp = () => {
                 </View>
 
                 <Image source={require('../../media/seele.jpeg')} style={styles.postImage} />
+
+                <View style={styles.interactionMenu}>
+
+                    <View style={styles.buttonList}>
+
+                        <Pressable style={styles.interactionButton}>
+                            <Ionicons name="heart" size={28} color="black" />
+                        </Pressable>
+
+                        <Pressable style={styles.interactionButton}>
+                            <Ionicons name="chatbubble" size={28} color="black" />
+                        </Pressable>
+
+                        <Pressable style={styles.interactionButton}>
+                            <Ionicons name="share" size={28} color="black" />
+                        </Pressable>
+
+                    </View>
+
+                    <View style={styles.followButton}>
+
+                        <Button title="Follow" color='black' />
+
+                    </View>
+
+                </View>
 
             </ScrollView>
 
@@ -82,6 +110,38 @@ const styles = StyleSheet.create({
     postImage: {
         width: '100%',
         height: 640,
+    },
+
+    interactionMenu: {
+        flexDirection: 'row',
+        marginTop: 16,
+        marginLeft: 16,
+        marginRight: 16,
+        justifyContent: "space-between",
+    },
+
+    buttonList: {
+        flexDirection: 'row',
+    },
+
+    interactionButton: {
+        color: 'black',
+        padding: 9,
+        borderRadius: 40,
+        borderColor: 'black',
+        borderWidth: 2,
+        backgroundColor: 'white',
+        marginRight: 8,
+    },
+
+    followButton: {
+        justifyContent: 'center',
+        paddingLeft: 16,
+        paddingRight: 16,
+        borderRadius: 340,
+        borderColor: 'black',
+        borderWidth: 2,
+        backgroundColor: 'white',
     },
 })
 
