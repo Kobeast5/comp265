@@ -54,6 +54,26 @@ const ArtworkApp = () => {
 
                 </View>
 
+                <Text style={styles.description}>My first attempt at drawing this character. Hope y’all like it!</Text>
+
+                <View style={styles.postInfo}>
+
+                    <Image source={require('../../media/example-profile-picture.jpeg')} style={styles.profilePictureLarge} />
+                    <Text style={styles.usernameLarge}>Amaki</Text>
+
+                </View>
+
+                <ScrollView horizontal style={styles.previewCarousel}>
+
+                    <Image source={require('../../media/seele.jpeg')} style={styles.previewCarouselItem} />
+                    <Image source={require('../../media/klee.jpeg')} style={styles.previewCarouselItem} />
+                    <Image source={require('../../media/keqing.jpeg')} style={styles.previewCarouselItem} />
+                    <Pressable style={styles.previewCarouselMore}>
+                        <Ionicons name="add" size={48} color="black" />
+                    </Pressable>
+
+                </ScrollView>
+
             </ScrollView>
 
         </View>
@@ -83,27 +103,27 @@ const styles = StyleSheet.create({
     postInfo: {
         flexDirection: 'row',
         alignItems: 'center',
-        paddingLeft: 16,
-        paddingBottom: 16,
+        marginLeft: 16,
+        marginBottom: 16,
     },
 
     profilePicture: {
-        width: 62,
-        height: 62,
+        width: 48,
+        height: 48,
         borderRadius: 100,
     },
 
     usernameAndTitle: {
-        paddingLeft: 10,
+        marginLeft: 10,
     },
 
     title: {
-        fontSize: 16,
+        fontSize: 14,
         fontWeight: 600,
     },
 
     username: {
-        fontSize: 21,
+        fontSize: 18,
         fontWeight: 600,
     },
 
@@ -114,9 +134,7 @@ const styles = StyleSheet.create({
 
     interactionMenu: {
         flexDirection: 'row',
-        marginTop: 16,
-        marginLeft: 16,
-        marginRight: 16,
+        margin: 16,
         justifyContent: "space-between",
     },
 
@@ -142,6 +160,49 @@ const styles = StyleSheet.create({
         borderColor: 'black',
         borderWidth: 2,
         backgroundColor: 'white',
+    },
+
+    description: {
+        marginLeft: 16,
+        marginRight: 16,
+        marginBottom: 16,
+        fontSize: 16,
+    },
+
+    profilePictureLarge: {
+        width: 60,
+        height: 60,
+        borderRadius: 100,
+    },
+
+    usernameLarge: {
+        fontSize: 22,
+        fontWeight: 600,
+        marginLeft: 10,
+    },
+
+    previewCarousel: {
+        marginLeft: 16,
+        marginRight: 16,
+    },
+
+    previewCarouselItem: {
+        width: 120,
+        height: 120,
+        borderRadius: 10,
+        marginLeft: 6,
+        marginRight: 6,
+    },
+
+    previewCarouselMore: {
+        width: 120,
+        height: 120,
+        borderRadius: 10,
+        marginLeft: 6,
+        marginRight: 6,
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: '#c7c7c7',
     },
 })
 
