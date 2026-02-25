@@ -1,6 +1,6 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
 import React from 'react';
-import { Button, Image, Pressable, ScrollView, StatusBar, StyleSheet, Text, View } from 'react-native';
+import { Button, Image, Pressable, ScrollView, StatusBar, StyleSheet, Text, TextInput, View } from 'react-native';
 
 
 const ArtworkApp = () => {
@@ -63,7 +63,7 @@ const ArtworkApp = () => {
 
                 </View>
 
-                <ScrollView horizontal style={styles.previewCarousel}>
+                <ScrollView horizontal style={styles.previewCarousel} showsHorizontalScrollIndicator={false} >
 
                     <Image source={require('../../media/seele.jpeg')} style={styles.previewCarouselItem} />
                     <Image source={require('../../media/klee.jpeg')} style={styles.previewCarouselItem} />
@@ -73,6 +73,34 @@ const ArtworkApp = () => {
                     </Pressable>
 
                 </ScrollView>
+
+                <Text style={styles.sectionHeader}>Comments</Text>
+                <TextInput
+                    editable
+                    multiline
+                    style={styles.commentInput}
+                    placeholder="Write a comment!"
+                    numberOfLines={4}
+                    maxLength={160} >
+                </TextInput>
+
+                <View style={styles.commentList}>
+                    <View style={styles.commentItem}>
+                        <Ionicons name="person-circle-outline" size={50} color="black" marginRight={8} />
+                        <View>
+                            <Text style={styles.commentUsername}>User018053</Text>
+                            <Text style={styles.commentText}>This looks great! I love all the work you do. Please keep up the good work!</Text>
+                        </View>
+                    </View>
+
+                    <View style={styles.commentItem}>
+                        <Ionicons name="person-circle-outline" size={50} color="black" marginRight={8} />
+                        <View>
+                            <Text style={styles.commentUsername}>User130089</Text>
+                            <Text style={styles.commentText}>Yo, what app do use for your drawings?</Text>
+                        </View>
+                    </View>
+                </View>
 
             </ScrollView>
 
@@ -203,6 +231,46 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: '#c7c7c7',
+    },
+
+    sectionHeader: {
+        fontSize: 32,
+        margin: 16,
+        fontWeight: 600,
+    },
+
+    commentInput: {
+        marginLeft: 16,
+        marginRight: 16,
+        padding: 6,
+        fontSize: 16,
+        backgroundColor: 'white',
+        borderRadius: 6,
+        borderWidth: 1,
+        borderColor: 'black',
+        height: 92,
+    },
+
+    commentList: {
+        marginLeft: 16,
+        marginRight: 16,
+        marginTop: 16,
+    },
+
+    commentItem: {
+        flexDirection: 'row',
+        marginBottom: 16,
+    },
+
+    commentUsername: {
+        fontSize: 20,
+        fontWeight: 600,
+        marginBottom: 8,
+    },
+
+    commentText: {
+        fontSize: 16,
+        marginRight: 56,
     },
 })
 
