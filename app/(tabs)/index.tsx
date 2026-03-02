@@ -117,6 +117,10 @@ const ArtworkApp = () => {
                     maxLength={160} >
                 </TextInput>
 
+                <View style={styles.commentButton}>
+                    <Button title="Post Comment" color="black" />
+                </View>
+
                 <View style={styles.commentList}>
                     <View style={styles.commentItem}>
                         <Ionicons name="person-circle-outline" size={50} color="black" marginRight={8} />
@@ -282,6 +286,19 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: 'black',
         height: 92,
+    },
+
+    commentButton: {
+        justifyContent: 'center',
+        width: 180,
+        marginTop: 16,
+        marginLeft: 16,
+        paddingLeft: 16,
+        paddingRight: 16,
+        borderRadius: 340,
+        borderColor: 'black',
+        borderWidth: 2,
+        backgroundColor: 'white',
     },
 
     commentList: {

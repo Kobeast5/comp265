@@ -1,0 +1,25 @@
+This was a tough assignment for me, and it took me much longer to do than I imagined it would.
+One of the hardest parts about this assignment was figuring out the overall nuance of React Native.
+There were several times where things simply weren't working out the way I thought it would.
+An example of this was with getting the main image of the post to display properly.
+It seemed like no matter what I did, whether I was working with aspect ratios or size percentages, the image would appear as intended.
+It was always either cropped, or way too big and covered the whole screen.
+Thankfully, since I'm working with static content in this assignment, I was able to get away with using exact numbers to determine the image's height and width.
+I'd like to figure out a better solution in the future, but this one works for now.
+
+There was a lot I learned about when doing this assignment.
+One concept that I'd like to discuss is the "Animated" component.
+I came across this component while trying to figure out how to give my like button a little animation.
+I originally thought the solution would require some complex JSX and styling manipulation to get what I wanted.
+However, after learning that there's already a component that I can use for making simple animations, I felt a whole lot better.
+Looking into how it's used, it seemed pretty easy to understand, as someone who generally struggles when it comes to understanding JavaScript and JSX.
+Will this little animation give me any more marks on this assignment? Probably not.
+Am I focusing on the wrong things? Absolutely.
+Was it something I'm glad I learned about anyway? Yes, I think it was worth my time in the long run.
+
+If given more time on this assignment, I'd probably look more into the functionality of this screen.
+Updating the screen when you want to post a comment, creating a stack when you want to view a different image, and having the follow button actually do something.
+These are all things I would like to do.
+Granted, most of these would either require having more screens, or using concepts not yet discussed for this assignment.
+But hey, I think it's good to be ambitious.
+After all, mobile apps are about the interactions you put into them.

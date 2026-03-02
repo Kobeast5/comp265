@@ -18,4 +18,4 @@ How will the user interact with your app?
 
 Sketch or wireframe your design.
 
-C:\..\media\assignment-1-wireframe
+C:comp265-a1-wireframe-kobecurtis.pdf
