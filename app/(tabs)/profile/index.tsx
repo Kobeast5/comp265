@@ -1,12 +1,39 @@
 import { Link } from "expo-router";
-import { Text, View } from "react-native";
+import React from 'react';
+import { Image, StyleSheet, Text, View } from "react-native";
 
-export default function ProfileScreen() {
+const ProfileScreen = () => {
     return (
-        <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-            <Text>Profile Screen</Text>
+        <View style={styles.screen}>
+
+            <Image source={require('../../../media/example-profile-picture.jpeg')} style={styles.profileImage} />
+            <Text style={styles.username}>Kobeast</Text>
             {/* Navigate to Details screen inside the same tab */}
-            <Link href="/profile/settings">Go to Details</Link>
+            <Link href="/profile/settings">Edit Profile</Link>
         </View>
     );
-}
+};
+
+const styles = StyleSheet.create({
+    screen: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#f0f0f0',
+    },
+
+    profileImage: {
+        width: 136,
+        height: 136,
+        borderRadius: 100,
+    },
+
+    username: {
+        fontSize: 28,
+        fontWeight: 600,
+        marginTop: 12,
+        marginBottom: 4,
+    },
+})
+
+export default ProfileScreen;
