@@ -1,13 +1,15 @@
-import { Link } from "expo-router";
+import { Link, useLocalSearchParams } from "expo-router";
 import React from 'react';
 import { Image, StyleSheet, Text, View } from "react-native";
 
 const ProfileScreen = () => {
+    const { username } = useLocalSearchParams();
+
     return (
         <View style={styles.screen}>
 
             <Image source={require('../../../media/example-profile-picture.jpeg')} style={styles.profileImage} />
-            <Text style={styles.username}>Kobeast</Text>
+            <Text style={styles.username}>{username ? username : "Kobeast"}</Text>
             {/* Navigate to Details screen inside the same tab */}
             <Link href="/profile/settings">Edit Profile</Link>
         </View>
