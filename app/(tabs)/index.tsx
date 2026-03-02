@@ -1,9 +1,39 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
-import React from 'react';
-import { Button, Image, Pressable, ScrollView, StatusBar, StyleSheet, Text, TextInput, View } from 'react-native';
+import React, { useRef, useState } from 'react';
+import { Animated, Button, Image, Pressable, ScrollView, StatusBar, StyleSheet, Text, TextInput, View } from 'react-native';
 
 
 const ArtworkApp = () => {
+    // Create state for the like button.
+    const [liked, setLiked] = useState(false);
+
+    // Create a smooth animation without any rerendering.
+    const likeAnimation = useRef(new Animated.Value(1)).current;
+
+    // Handle style change and animation trigger for the like button.
+    const handlePress = () => {
+
+        // Toggle like button state.
+        setLiked(!liked);
+
+        // This is the actual animation sequence.
+        Animated.sequence([
+            // Causes the like button icon to grow
+            Animated.timing(likeAnimation, {
+                toValue: 1.3,
+                duration: 125,
+                useNativeDriver: true,
+            }),
+            // Causes the like button icon to shrink back to it's original size.
+            Animated.timing(likeAnimation, {
+                toValue: 1,
+                duration: 125,
+                useNativeDriver: true,
+            }),
+            // Execute the animation values.
+        ]).start();
+    };
+
     return (
 
         <View style={styles.screen}>
@@ -32,8 +62,11 @@ const ArtworkApp = () => {
 
                     <View style={styles.buttonList}>
 
-                        <Pressable style={styles.interactionButton}>
-                            <Ionicons name="heart" size={28} color="black" />
+                        <Pressable style={styles.interactionButton} onPress={handlePress}>
+                            {/* Determine how to animate the icon. Here, we modify the size of the icon. */}
+                            <Animated.View style={{ transform: [{ scale: likeAnimation }] }}>
+                                <Ionicons name="heart" size={28} color={liked ? "red" : "black"} />
+                            </Animated.View>
                         </Pressable>
 
                         <Pressable style={styles.interactionButton}>
