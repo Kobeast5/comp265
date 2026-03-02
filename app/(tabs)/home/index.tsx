@@ -3,7 +3,7 @@ import React, { useRef, useState } from 'react';
 import { Animated, Button, Image, Pressable, ScrollView, StatusBar, StyleSheet, Text, TextInput, View } from 'react-native';
 
 
-const ArtworkApp = () => {
+const ArtworkView = () => {
     // Create state for the like button.
     const [liked, setLiked] = useState(false);
 
@@ -45,7 +45,7 @@ const ArtworkApp = () => {
 
                 <View style={styles.postInfo}>
 
-                    <Image source={require('../../media/example-profile-picture.jpeg')} style={styles.profilePicture} />
+                    <Image source={require('../../../media/example-profile-picture.jpeg')} style={styles.profilePicture} />
 
                     <View style={styles.usernameAndTitle}>
 
@@ -56,7 +56,7 @@ const ArtworkApp = () => {
 
                 </View>
 
-                <Image source={require('../../media/seele.jpeg')} style={styles.postImage} />
+                <Image source={require('../../../media/seele.jpeg')} style={styles.postImage} />
 
                 <View style={styles.interactionMenu}>
 
@@ -91,16 +91,16 @@ const ArtworkApp = () => {
 
                 <View style={styles.postInfo}>
 
-                    <Image source={require('../../media/example-profile-picture.jpeg')} style={styles.profilePictureLarge} />
+                    <Image source={require('../../../media/example-profile-picture.jpeg')} style={styles.profilePictureLarge} />
                     <Text style={styles.usernameLarge}>Amaki</Text>
 
                 </View>
 
                 <ScrollView horizontal style={styles.previewCarousel} showsHorizontalScrollIndicator={false} >
 
-                    <Image source={require('../../media/seele.jpeg')} style={styles.previewCarouselItem} />
-                    <Image source={require('../../media/klee.jpeg')} style={styles.previewCarouselItem} />
-                    <Image source={require('../../media/keqing.jpeg')} style={styles.previewCarouselItem} />
+                    <Image source={require('../../../media/seele.jpeg')} style={styles.previewCarouselItem} />
+                    <Image source={require('../../../media/klee.jpeg')} style={styles.previewCarouselItem} />
+                    <Image source={require('../../../media/keqing.jpeg')} style={styles.previewCarouselItem} />
                     <Pressable style={styles.previewCarouselMore}>
                         <Ionicons name="add" size={48} color="black" />
                     </Pressable>
@@ -324,4 +324,4 @@ const styles = StyleSheet.create({
     },
 })
 
-export default ArtworkApp;
+export default ArtworkView;

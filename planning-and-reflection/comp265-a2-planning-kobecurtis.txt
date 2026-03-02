@@ -1,0 +1,49 @@
+The plan for this project is continue what was done in assignment 1.
+To recap on the project idea, the following is copied from assignment 1's planning document:
+
+(App Idea
+
+    - The app will be a platform meant for posting visual artwork.
+    - Key features include:
+        - Uploading image based content
+        - Interacting with other users and their content
+        - Having a feed of posts catered to the user's interests
+        - Searching for specific content
+
+    - For the purpose of this assignment, the app will be for iOS only.
+
+
+How will the user interact with your app?
+
+    - Users can click on posts, which appear as preview images, to view them fully.
+    - Once in this view, users can like, save, comment on the post, and follow the artist.)
+
+
+As for this assignment, I will be creating additonal screens and connecting them using "expo-router".
+The structure for this app will go as follows:
+
+app
+    (tabs)
+        home
+            index.tsx (Home feed)
+            post-view.tsx
+            _layout.tsx
+        discover
+            index.tsx (Recommended topics & posts)
+            search.tsx
+            results.tsx
+            post-view.tsx
+            _layout.tsx
+        profile
+            index.tsx (Profile screen)
+            settings.tsx
+            _layout.tsx
+        _layout.tsx
+    index.tsx
+    _layout.tsx
+
+Due to time constraints and limited knowledge of JSX, a lot of the functionality will be missing.
+However, I do plan to perform the minimum of having proper navigation, as well as passing some parameters between pages.
+The wireframes and mockups for this project can be found within this project's "planning-and-reflection" folder.
+The file name is "comp265-a2-wireframes-kobecurtis.fig".
+(This file is being reused from a previous class, DSGN-210.)
