@@ -1,0 +1,40 @@
+Before beginning my reflection, I want to preface things by saying that this is an incomplete assignment.
+Not all the skills that are required are demonstrated here, and there is much more that I would like to do.
+However, in the interest of submitting something at a reasonable time and receiving an acceptable mark, 
+I must conclude this project early.
+If time permits, I may attempt a bit more in a second submission.
+But for now, let's get onto the reflection.
+
+There were a couple things here that gave me some trouble.
+One of those things was getting the banner to appear as intended on the profile screen.
+It took me a bit to get that and the overlapping profile picture to look good, as well as getting a drop shadow
+below the banner.
+On top of this, I also wanted to have a solid colour background for the banner to act as a fallback.
+I wanted this in the event that the user doesn't set an image themselves.
+Of course, this is all just static content at the moment. I just want to think ahead.
+However, I digress.
+What I'm trying to say is that having all these different elements working together as intended gave me a
+bit of a challenge.
+For this challenge, I asked ChatGPT for assistance.
+I provided some context to the AI, and it gave a couple solutions.
+I chose the solution that best fit what I wanted, and started playing around with things.
+I personally like to ask ChatGPT for coding help on a regular basis, but copying and pasting code
+doesn't feel right to me.
+I have to make sure I actually understand what I'm working with before I use it.
+Whether I get ChatGPT to teach me about a new concept, or I play around with the code myself, I pride myself
+on truly knowing what I'm doing.
+After tweaking some numbers to better fit the context of my app, I eventually got what I wanted.
+
+The one new thing I really learned about during this assignment was 'StyleSheet.absoluteFillObject'.
+It's a new piece of styling that I used a couple times while working on this project.
+One time was with the profile banner, which was used on the image to fully lay on top of the fallback background.
+Another time was when I used it on the images in my horizontal scroll on the discover screen.
+There, I gave the images a dark tint so I could overlay some text on top.
+This is definitely a concept that I can see myself using in the future.
+
+I think this goes without saying, but given more time, I would like to actually meet the requirements of this assignment.
+But assuming that I had completed everything I originally intended to do, I would've liked to create some dynamic content.
+For example, When clicking each image on the discover screen, I would like to update the post view screen with the image
+that you clicked.
+Additionally, I would've updated artist info, post title, description, based on the image loaded.
+It may be a tall order, but it's something I would've liked to have challenged myself with.
