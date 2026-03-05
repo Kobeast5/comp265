@@ -45,7 +45,7 @@ const ArtworkView = () => {
 
                 <View style={styles.postInfo}>
 
-                    <Image source={require('../../../media/example-profile-picture.jpeg')} style={styles.profilePicture} />
+                    <Image source={require('../../../media/keqing.jpeg')} style={styles.profilePicture} />
 
                     <View style={styles.usernameAndTitle}>
 
@@ -91,7 +91,7 @@ const ArtworkView = () => {
 
                 <View style={styles.postInfo}>
 
-                    <Image source={require('../../../media/example-profile-picture.jpeg')} style={styles.profilePictureLarge} />
+                    <Image source={require('../../../media/keqing.jpeg')} style={styles.profilePictureLarge} />
                     <Text style={styles.usernameLarge}>Amaki</Text>
 
                 </View>
